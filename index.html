@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Clothing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('storefront.jpg.jpeg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .logo {
+            width: 150px;
+            margin: 20px auto;
+            animation: bounce 2s infinite;
+        }
+        h1, p {
+            margin: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .enquiry-form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .enquiry-form input, .enquiry-form textarea, .enquiry-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .enquiry-form button {
+            background: #FFD700;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .enquiry-form button:hover {
+            background: #ffffff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <img src="logo.png.jpeg" alt="Elegance Clothing Logo" class="logo">
+            <h1>Elegance Clothing</h1>
+            <p>BTM Layout 2nd Stage, Bangalore, 560076</p>
+            <p>We bring you the latest fashion trends at affordable prices.</p>
+            <div class="contact">
+                <p>📞 <a href="tel:9353900129">9353900129</a></p>
+                <p>📧 <a href="mailto:eleganceclothingbtm@gmail.com">eleganceclothingbtm@gmail.com</a></p>
+                <p>📷 <a href="https://instagram.com/elegance.clothingcompany" target="_blank">Follow us on Instagram</a></p>
+            </div>
+
+            <form class="enquiry-form">
+                <h3>Enquiry Form</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="phone number" name="number" placeholder="Your number" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
